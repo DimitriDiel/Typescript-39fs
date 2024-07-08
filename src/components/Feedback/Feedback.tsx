@@ -1,6 +1,6 @@
 // import Like from "../../assets/like.png";
 
-import Button from "../Button/Button";
+import Button from "components/Button/Button";
 
 import "./styles.css";
 

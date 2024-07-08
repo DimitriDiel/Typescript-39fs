@@ -1,17 +1,12 @@
-import Button from "../Button/Button";
-import Input from "../Input/Input";
+import { MouseEvent } from "react";
+
+import Button from "components/Button/Button";
+import Input from "components/Input/Input";
 
 import "./styles.css";
 
 function LoginForm() {
-  /* Пример работы с onClick() */
-  // const clickOnMe = (event, someAttr) => {
-  //   console.log(event)
-  //   console.log(someAttr);
-  //   console.log("Trigger on button works, button is clicked");
-  // };
-
-  const login = (event: any): void => {
+  const login = (event: MouseEvent): void => {
     event.preventDefault();
     console.log("User logged in succesfully");
   };
@@ -36,8 +31,6 @@ function LoginForm() {
         />
       </div>
       <Button onClick={login} name="Login" type="submit" />
-      {/* Пример работы с onClick() */}
-      {/* <button onClick={(event) => clickOnMe(event, "Some message")} className="button-click" type="button">Click me!!!</button> */}
     </form>
   );
 }

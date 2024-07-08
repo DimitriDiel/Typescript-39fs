@@ -1,10 +1,7 @@
-import "./styles.css";
 import { UserDataType } from "./types";
 
-// Комаоненты, как и обычные функции могут принимать аргументы
-// Но может принимать в себя только 1 аргумент - это ОБЬЕКТ!!!
-// Этот объект называется props
-// По умолчанию props - пустой объект, если вы в него ничего не передаете
+import "./styles.css";
+
 function SimponsCard({
   avatar,
   firstName,
