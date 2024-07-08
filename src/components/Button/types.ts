@@ -5,4 +5,6 @@ export interface ButtonProps {
   type?: "button" | "submit" | "reset" | undefined;
   name: string;
   onClick: (event: MouseEvent) => void;
+  disabled?: boolean;
+  isRed?: boolean;
 }
