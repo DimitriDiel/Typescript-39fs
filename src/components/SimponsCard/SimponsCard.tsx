@@ -1,6 +1,6 @@
 import { UserDataType } from "./types";
 
-import "./styles.css";
+import { CardWrapper, CardItem, AvatarImg } from "./styles";
 
 function SimponsCard({
   avatar,
@@ -10,12 +10,12 @@ function SimponsCard({
   hobby,
 }: UserDataType) {
   return (
-    <div className="card-wrapper">
-      <img className="avatar" src={avatar} alt="Avatar" />
-      <p className="card-item">Full name: {`${firstName} ${lastName}`}</p>
-      <p className="card-item">Job: {job}</p>
-      <p className="card-item">Hobby: {hobby}</p>
-    </div>
+    <CardWrapper>
+      <AvatarImg src={avatar} alt="Avatar" />
+      <CardItem>Full name: {`${firstName} ${lastName}`}</CardItem>
+      <CardItem>Job: {job}</CardItem>
+      <CardItem>Hobby: {hobby}</CardItem>
+    </CardWrapper>
   );
 }
 

@@ -1,5 +1,5 @@
 import { v4 } from "uuid";
-import "./styles.css";
+import { PageWrapper, Card } from "./styles";
 import { Car } from "./types";
 
 function Homework_06() {
@@ -13,15 +13,15 @@ function Homework_06() {
 
   const addCards = cars.map((car: Car) => {
     return (
-      <div key={v4()} className="card">
+      <Card key={v4()}>
         <h2>Brand name: {car.brand}</h2>
         <h2>Price: {car.price}</h2>
         <h2>Type of engine : {car.isDiesel ? "Disel" : "Benzin"}</h2>
-      </div>
+      </Card>
     );
   });
 
-  return <div className="page_wrapper">{addCards}</div>;
+  return <PageWrapper>{addCards}</PageWrapper>;
 }
 
 export default Homework_06;
