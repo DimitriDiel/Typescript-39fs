@@ -1,8 +1,11 @@
-// import Like from "../../assets/like.png";
-
 import Button from "components/Button/Button";
 
-import "./styles.css";
+import {
+  StyledFeedback,
+  FeedbackControl,
+  ButtonWithCountContainer,
+  FeedbackCount,
+} from "./styles";
 
 interface FeedbackProps {
   like: number;
@@ -20,20 +23,19 @@ function Feedback({
   resetResults,
 }: FeedbackProps) {
   return (
-    <div className="feedback-wrapper">
-      <div className="feedback-control">
-        <div className="buttonwithcount-container">
-          {/* <Button imgSrc={Like} name="Like" onClick={onLike} /> */}
+    <StyledFeedback>
+      <FeedbackControl>
+        <ButtonWithCountContainer>
           <Button name="Like" onClick={onLike} />
-          <p className="count">{like}</p>
-        </div>
-        <div className="buttonwithcount-container">
+          <FeedbackCount>{like}</FeedbackCount>
+        </ButtonWithCountContainer>
+        <ButtonWithCountContainer>
           <Button name="Dislike" onClick={onDislike} />
-          <p className="count">{dislike}</p>
-        </div>
-      </div>
+          <FeedbackCount>{dislike}</FeedbackCount>
+        </ButtonWithCountContainer>
+      </FeedbackControl>
       <Button name="Reset Results" onClick={resetResults} />
-    </div>
+    </StyledFeedback>
   );
 }
 

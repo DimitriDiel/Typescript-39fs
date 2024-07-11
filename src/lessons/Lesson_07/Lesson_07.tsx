@@ -1,4 +1,4 @@
-import "./styles.css";
+import { Lesson07Wrapper } from "./styles";
 import { WEATHER_CODES } from "./types";
 
 function Lesson_07() {
@@ -75,7 +75,7 @@ function Lesson_07() {
     },
   };
 
-  return <div>Lesson 07</div>;
+  return <Lesson07Wrapper>Lesson 07</Lesson07Wrapper>;
 }
 
 export default Lesson_07;

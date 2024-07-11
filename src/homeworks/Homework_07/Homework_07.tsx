@@ -5,7 +5,7 @@ import Input from "components/Input/Input";
 import LoginForm from "components/LoginForm/LoginForm";
 import SimponsCard from "components/SimponsCard/SimponsCard";
 
-import "./styles.css";
+import { Homework07Wrapper } from "./styles";
 
 function Homework_07() {
   const [like, setLike] = useState<number>(0);
@@ -24,7 +24,7 @@ function Homework_07() {
   };
 
   return (
-    <div className="homework07-wrapper">
+    <Homework07Wrapper>
       <div>
         <Input
           id="1"
@@ -32,6 +32,8 @@ function Homework_07() {
           type="text"
           placeholder="Enter first name"
           label="First name"
+          disabled={false}
+          $error={undefined}
         />
       </div>
       <div>
@@ -55,7 +57,7 @@ function Homework_07() {
           resetResults={resetResults}
         />
       </div>
-    </div>
+    </Homework07Wrapper>
   );
 }
 
