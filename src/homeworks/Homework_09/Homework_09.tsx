@@ -10,8 +10,7 @@ import {
 import Button from "components/Button/Button";
 
 function Homework_09() {
-  const [searchRandomJokeValue] = useState<string>("");
-  const [RandomJoke, setRandomJoke] = useState<string | undefined>(undefined);
+  const [randomJoke, setRandomJoke] = useState<string | undefined>(undefined);
   const [error, setError] = useState<string | undefined>(undefined);
 
   const getRandomJoke = async () => {
@@ -33,11 +32,11 @@ function Homework_09() {
 
   useEffect(() => {
     getRandomJoke();
-  }, [searchRandomJokeValue]);
+  }, []);
 
   return (
     <Homework09Wrapper>
-      {RandomJoke && <JokeCard>{RandomJoke}</JokeCard>}
+      {randomJoke && <JokeCard>{randomJoke}</JokeCard>}
       {error && <ErrorCard>{error}</ErrorCard>}
       <ButtonControl>
         <Button name="getJoke" onClick={getRandomJoke} />
