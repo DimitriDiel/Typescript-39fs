@@ -6,41 +6,46 @@ interface StyledInputProps {
   $error: string | undefined;
 }
 
-export const InputWrapper = styled("div")`
+export const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4px;
 `;
-export const InputLabel = styled("label")`
+
+export const InputLabel = styled.label`
   font-size: 16px;
-  color: hsl(0, 0%, 44%);
+  color: ${colors.LABEL};
 `;
 
-const getStyledInputDorder = (
+const getStyledInputBorder = (
   disabled: boolean | undefined,
   error: string | undefined
 ) => {
   if (typeof error === "string") {
-    return "red";
+    return colors.ERROR;
   } else if (disabled) {
-    return "gray";
+    return "grey";
   } else {
-    return "#3f3f3f";
+    return colors.DISABLED;
   }
 };
 
-export const InputComponent = styled("input")<StyledInputProps>`
+export const StyledInput = styled.input<StyledInputProps>`
   width: 100%;
   height: 50px;
-  border: 3px solid
-    ${({ disabled, $error }) => getStyledInputDorder(disabled, $error)};
-
+  border: 1px solid
+    ${({ disabled, $error }) => getStyledInputBorder(disabled, $error)};
   border-radius: 4px;
   padding: 12px;
   outline: none;
 
   &::placeholder {
-    color: "gray";
+    color: ${colors.PLACEHOLDER};
     font-size: 16px;
   }
+`;
+
+export const ErrorContainer = styled.div`
+  color: ${colors.ERROR};
+  font-size: 18px;
 `;

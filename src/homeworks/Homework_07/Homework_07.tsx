@@ -33,7 +33,7 @@ function Homework_07() {
           placeholder="Enter first name"
           label="First name"
           disabled={false}
-          $error={undefined}
+          error={undefined}
         />
       </div>
       <div>

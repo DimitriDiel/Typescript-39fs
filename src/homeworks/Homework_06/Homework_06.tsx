@@ -1,6 +1,7 @@
 import { v4 } from "uuid";
 import { PageWrapper, Card } from "./styles";
 import { Car } from "./types";
+import { ReactNode } from "react";
 
 function Homework_06() {
   const cars: Car[] = [
@@ -11,7 +12,7 @@ function Homework_06() {
     { brand: "Audi", price: 50000, isDiesel: true },
   ];
 
-  const addCards = cars.map((car: Car) => {
+  const addCards: ReactNode[] = cars.map((car: Car) => {
     return (
       <Card key={v4()}>
         <h2>Brand name: {car.brand}</h2>

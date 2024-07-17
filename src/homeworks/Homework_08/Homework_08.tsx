@@ -13,7 +13,7 @@ function Homework_08() {
         placeholder="simple input"
         label="Simple Input"
         disabled={false}
-        $error={undefined}
+        error={undefined}
       />
       <Input
         id="1"
@@ -22,7 +22,7 @@ function Homework_08() {
         placeholder="no input"
         label="Disabled Input"
         disabled={true}
-        $error={undefined}
+        error={undefined}
       />
       <Input
         id="2"
@@ -31,7 +31,7 @@ function Homework_08() {
         placeholder="Error input"
         label="Error Input"
         disabled={false}
-        $error="Some error"
+        error="Some error"
       />
       <Button
         name="Simple Button"

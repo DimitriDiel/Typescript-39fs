@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { isDisabled } from "@testing-library/user-event/dist/utils";
 
 interface StyledButtonProps {
   $isRed?: boolean;
