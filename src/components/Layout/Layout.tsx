@@ -17,12 +17,14 @@ function Layout({ children }: LayoutProps) {
   return (
     <LayoutWrapper>
       <Header>
-        <Logo>
-          <LogoImg
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxOGDYH2tzlcwZSDpjg0qRGgEHAxVhsKHFUg&s"
-            alt="App logo"
-          />
-        </Logo>
+        <FooterLink to="/">
+          <Logo>
+            <LogoImg
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxOGDYH2tzlcwZSDpjg0qRGgEHAxVhsKHFUg&s"
+              alt="App logo"
+            />
+          </Logo>
+        </FooterLink>
         <NavigationContainer>
           <Link
             style={({ isActive }) => ({
@@ -32,6 +34,15 @@ function Layout({ children }: LayoutProps) {
             to="/"
           >
             Home
+          </Link>
+          <Link
+            style={({ isActive }) => ({
+              fontWeight: isActive ? "bold" : "normal",
+              textDecoration: isActive ? "underline" : "none",
+            })}
+            to="/clients"
+          >
+            Clients
           </Link>
           <Link
             style={({ isActive }) => ({
@@ -72,6 +83,7 @@ function Layout({ children }: LayoutProps) {
         </FooterLogo>
         <FooterNavigation>
           <FooterLink to="/">Home</FooterLink>
+          <FooterLink to="/clients">Clients</FooterLink>
           <FooterLink to="/contactUs">Contact Us</FooterLink>
           <FooterLink to="/about">About</FooterLink>
           <FooterLink to="/login">Log In</FooterLink>
