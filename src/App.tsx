@@ -6,6 +6,10 @@ import Home from "pages/AmployeeApp/Home/Home";
 import About from "pages/AmployeeApp/About/About";
 import LogIn from "pages/AmployeeApp/LogIn/LogIn";
 import ContactUs from "pages/AmployeeApp/ContactUs/ContactUs";
+import Clients from "pages/Clients/Clients";
+import Audi from "pages/Clients/Audi/Audi";
+import Bmw from "pages/Clients/Bmw/Bmw";
+import Volkswagen from "pages/Clients/Volkswagen/Volkswagen";
 
 // Lessons
 import Lesson_06 from "./lessons/Lesson_06/Lesson_06";
@@ -31,9 +35,13 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/clients" element={<Clients />} />
           <Route path="/about" element={<About />} />
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/login" element={<LogIn />} />
+          <Route path="/clients/Audi" element={<Audi />} />
+          <Route path="/clients/Bmw" element={<Bmw />} />
+          <Route path="/clients/Volkswagen" element={<Volkswagen />} />
           <Route path="*" element="Page Not Found!!!" />
         </Routes>
       </Layout>
