@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 import {
   LayoutWrapper,
   Header,
@@ -14,17 +16,22 @@ import {
 import { LayoutProps } from "./types";
 
 function Layout({ children }: LayoutProps) {
+  const navigate = useNavigate();
+
+  const goToHomePage = () => {
+    navigate("/");
+  };
+
   return (
     <LayoutWrapper>
       <Header>
-        <FooterLink to="/">
-          <Logo>
-            <LogoImg
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxOGDYH2tzlcwZSDpjg0qRGgEHAxVhsKHFUg&s"
-              alt="App logo"
-            />
-          </Logo>
-        </FooterLink>
+        <Logo onClick={goToHomePage}>
+          <LogoImg
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxOGDYH2tzlcwZSDpjg0qRGgEHAxVhsKHFUg&s"
+            alt="App logo"
+          />
+        </Logo>
+
         <NavigationContainer>
           <Link
             style={({ isActive }) => ({
