@@ -22,7 +22,7 @@ function BlogManagement() {
   return (
     <BlogManagementContext.Provider value={postedMessage}>
       <BlogManagementWrapper>
-        <TextArea onChange={onChange} />
+        <TextArea name="textArea" value={message} onChange={onChange} />
         <Button name="Запостить" onClick={postMessage} />
         <Card />
       </BlogManagementWrapper>

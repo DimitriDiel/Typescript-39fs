@@ -10,6 +10,7 @@ import Clients from "pages/Clients/Clients";
 import Audi from "pages/Clients/Audi/Audi";
 import Bmw from "pages/Clients/Bmw/Bmw";
 import Volkswagen from "pages/Clients/Volkswagen/Volkswagen";
+import { APP_ROUTES } from "constants/routes";
 
 // Lessons
 import Lesson_06 from "./lessons/Lesson_06/Lesson_06";
@@ -36,15 +37,15 @@ function App() {
       <GlobalStyles />
       {/* <Layout>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/clients" element={<Clients />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contactUs" element={<ContactUs />} />
-          <Route path="/login" element={<LogIn />} />
-          <Route path="/clients/Audi" element={<Audi />} />
-          <Route path="/clients/Bmw" element={<Bmw />} />
-          <Route path="/clients/Volkswagen" element={<Volkswagen />} />
-          <Route path="*" element="Page Not Found!!!" />
+          <Route path={APP_ROUTES.HOME} element={<Home />} />
+          <Route path={APP_ROUTES.CLIENTS} element={<Clients />} />
+          <Route path={APP_ROUTES.ABOUT} element={<About />} />
+          <Route path={APP_ROUTES.COUNTACT_US} element={<ContactUs />} />
+          <Route path={APP_ROUTES.LOGIN} element={<LogIn />} />
+          <Route path={APP_ROUTES.AUDI} element={<Audi />} />
+          <Route path={APP_ROUTES.BMW} element={<Bmw />} />
+          <Route path={APP_ROUTES.VOLKSWAGEN} element={<Volkswagen />} />
+          <Route path={APP_ROUTES.NOT_FOUND} element="Page Not Found!!!" />
         </Routes>
       </Layout> */}
       {/* <Consultation_03 /> */}
